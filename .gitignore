@@ -1,0 +1,71 @@
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Editor / IDE artifacts
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Data and Artifacts (ignore actual binaries / datasets but keep directory structure)
+data/raw/*.csv
+data/processed/*.csv
+artifacts/models/*.joblib
+artifacts/models/*.pkl
+artifacts/metrics/*.json
+artifacts/plots/*.png
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!artifacts/models/.gitkeep
+!artifacts/metrics/.gitkeep
+!artifacts/plots/.gitkeep

@@ -1,0 +1,69 @@
+# Model Hyperparameters and Strategy Configuration
+
+supervised:
+  regression:
+    polynomial_degree: 2
+    ridge_alpha: 10.0
+    lasso_alpha: 5.0
+  classification:
+    knn_neighbors: 5
+    knn_metric: "euclidean"
+    svm_linear_c: 1.0
+    svm_rbf_c: 1.0
+    svm_rbf_gamma: "scale"
+  decision_tree:
+    unpruned_criterion: "gini"
+    pruned_criterion: "entropy"
+    pruned_max_depth: 3
+    pruned_min_samples_split: 5
+
+unsupervised:
+  clustering:
+    kmeans_clusters: 3
+    kmeans_init: "k-means++"
+    hierarchical_clusters: 3
+    hierarchical_linkage: "ward"
+  density:
+    dbscan_eps: 0.5
+    dbscan_min_samples: 5
+  dim_reduction:
+    pca_components: 2
+    tsne_components: 2
+    tsne_perplexity: 30.0
+
+evaluation:
+  cv_folds: 5
+  stratified: true
+  scoring_classification: "f1"
+  scoring_regression: "neg_mean_squared_error"
+  grid_search_rf:
+    n_estimators: [50, 100]
+    max_depth: [3, 5, 8]
+
+optimization:
+  epochs: 100
+  learning_rate: 0.05
+  batch_size: 32
+  optimizers: ["bgd", "sgd", "minibatch", "adagrad", "rmsprop", "adam"]
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1e-8
+
+ensemble:
+  random_forest:
+    n_estimators: 100
+    max_depth: 5
+    random_state: 42
+  adaboost:
+    n_estimators: 50
+    learning_rate: 1.0
+  gradient_boosting:
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 3
+  xgboost:
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 3
+  stacking:
+    final_estimator: "logistic_regression"

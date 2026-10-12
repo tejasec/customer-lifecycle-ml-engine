@@ -1,0 +1,23 @@
+# Global Project Configuration
+
+project:
+  name: "mlo-customer-engine"
+  version: "0.1.0"
+  random_seed: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  models_dir: "artifacts/models"
+  metrics_dir: "artifacts/metrics"
+  plots_dir: "artifacts/plots"
+  default_dataset: "data/raw/customer_churn_data.csv"
+
+data_generation:
+  default_samples: 1000
+  test_size: 0.2
+  random_state: 42
+
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] %(levelname)s - %(name)s: %(message)s"
